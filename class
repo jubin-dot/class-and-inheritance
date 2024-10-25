@@ -1,0 +1,33 @@
+class Car {
+  // Properties
+  String make;
+  String model;
+  int year;
+  double mileage;
+
+  // Constructor
+  Car(this.make, this.model, this.year, this.mileage);
+
+  // Method to display car details
+  void displayInfo() {
+    print('Car Make: $make');
+    print('Car Model: $model');
+    print('Year: $year');
+    print('Mileage: ${mileage.toStringAsFixed(2)} miles');
+  }
+// Method to drive the car
+  void drive(double distance) {
+    mileage += distance;
+    print('You drove $distance miles. Total mileage: ${mileage.toStringAsFixed(2)} miles');
+  }
+}
+void main() {
+  // Creating an instance of Car
+  Car myCar = Car('Toyota', 'Corolla', 2020, 15000);
+
+  // Displaying car information
+  myCar.displayInfo();
+
+  // Driving the car
+  myCar.drive(100);
+}
